@@ -1,0 +1,113 @@
+@config "../../tailwind.config.ts";
+@import "tailwindcss";
+
+:root {
+  --background: #fafaeb;
+  --foreground: #1b1c14;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-gold: #735c00;
+  --color-gold-light: #d4af37;
+  --color-gold-bright: #e9c349;
+  --color-gold-pale: #ffe088;
+  --color-ivory: #fafaeb;
+  --color-ivory-dim: #dbdbcd;
+  --color-ivory-low: #f4f5e6;
+  --color-ivory-mid: #efefe0;
+  --color-ivory-high: #e9e9db;
+  --color-ivory-highest: #e3e3d5;
+  --color-ivory-bright: #ffffff;
+  --color-ink: #1b1c14;
+  --color-ink-muted: #4d4635;
+  --color-ink-outline: #7f7663;
+  --color-ink-border: #d0c5af;
+  --font-sans: var(--font-montserrat);
+  --font-serif: var(--font-playfair);
+  --spacing-section: 120px;
+  --spacing-gutter: 24px;
+  --spacing-container: 80px;
+  --spacing-container-sm: 20px;
+  --shadow-card: 0 10px 30px -10px rgba(168, 159, 145, 0.3);
+  --shadow-hover: 0 20px 60px -15px rgba(168, 159, 145, 0.45);
+  --shadow-gold: 0 4px 20px rgba(212, 175, 55, 0.2);
+  --shadow-button: 0 8px 24px rgba(115, 92, 0, 0.25);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+}
+
+a,
+button,
+input,
+textarea {
+  outline-color: #d4af37;
+}
+
+::selection {
+  background: #d4af37;
+  color: #1b1c14;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-playfair), Georgia, serif;
+  }
+}
+
+@layer utilities {
+  .glass-nav {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .section-padding {
+    @apply px-container-sm py-20 md:px-container md:py-section;
+  }
+
+  .section-container {
+    @apply mx-auto max-w-site;
+  }
+
+  .label-uppercase {
+    @apply font-sans text-xs font-semibold uppercase tracking-[0.22em];
+  }
+
+  .masonry {
+    column-count: 1;
+    column-gap: 24px;
+  }
+
+  .masonry-item {
+    break-inside: avoid;
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: 768px) {
+    .masonry {
+      column-count: 2;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .masonry {
+      column-count: 3;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+
+> nff-site@0.1.0 dev
+> next dev -p 3001
+
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:3001
+- Network:       http://192.168.56.1:3001
+- Environments: .env.local
+✓ Ready in 910ms
+Creating turbopack project { dir: 'C:\\Users\\walke\\NFF website', testMode: true }
+
+○ Compiling / ...
+ GET / 200 in 6.7s (next.js: 5.9s, application-code: 715ms)
+ GET / 200 in 340ms (next.js: 9ms, application-code: 330ms)
+ GET / 200 in 826ms (next.js: 16ms, application-code: 810ms)
+Groq API Key Loaded: true
+ POST /api/chat 200 in 1069ms (next.js: 656ms, application-code: 413ms)
+Groq API Key Loaded: true
+ POST /api/chat 200 in 497ms (next.js: 4ms, application-code: 493ms)
+ GET / 200 in 898ms (next.js: 8ms, application-code: 889ms)
+ GET / 200 in 21ms (next.js: 7ms, application-code: 14ms)
+ GET / 200 in 64ms (next.js: 4ms, application-code: 60ms)
+ GET / 200 in 13ms (next.js: 4ms, application-code: 9ms)
+ GET / 200 in 101ms (next.js: 4ms, application-code: 98ms)
+ GET / 200 in 11ms (next.js: 4ms, application-code: 7ms)
+ GET / 200 in 11ms (next.js: 3ms, application-code: 8ms)

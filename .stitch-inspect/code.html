@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LUXE WELLNESS | Namita’s Femme Fitness</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#735c00",
+                        "outline": "#7f7663",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#f1f2e3",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#554300",
+                        "tertiary": "#685d4a",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-variant": "#e3e3d5",
+                        "inverse-primary": "#e9c349",
+                        "surface-container-high": "#e9e9db",
+                        "background": "#fafaeb",
+                        "secondary-fixed-dim": "#c9c6c5",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "on-tertiary-fixed-variant": "#4f4533",
+                        "secondary-fixed": "#e5e2e1",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed": "#f0e0c8",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#4e4432",
+                        "surface-bright": "#fafaeb",
+                        "secondary-container": "#e5e2e1",
+                        "on-surface": "#1b1c14",
+                        "on-primary-fixed": "#241a00",
+                        "secondary": "#5f5e5e",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed-variant": "#474646",
+                        "on-surface-variant": "#4d4635",
+                        "surface-container": "#efefe0",
+                        "surface-dim": "#dbdbcd",
+                        "tertiary-container": "#bfb19a",
+                        "on-background": "#1b1c14",
+                        "surface": "#fafaeb",
+                        "error": "#ba1a1a",
+                        "on-secondary-container": "#656464",
+                        "inverse-surface": "#2f3128",
+                        "on-error": "#ffffff",
+                        "outline-variant": "#d0c5af",
+                        "primary-container": "#d4af37",
+                        "primary": "#735c00",
+                        "primary-fixed-dim": "#e9c349",
+                        "tertiary-fixed-dim": "#d3c5ad",
+                        "surface-container-highest": "#e3e3d5",
+                        "primary-fixed": "#ffe088",
+                        "on-tertiary-fixed": "#221b0b",
+                        "surface-container-low": "#f4f5e6",
+                        "on-primary-fixed-variant": "#574500"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "section-gap": "120px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "container-margin-mobile": "20px",
+                        "container-margin-desktop": "80px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Playfair Display"],
+                        "label-md": ["Montserrat"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "label-sm": ["Montserrat"],
+                        "display-lg": ["Playfair Display"],
+                        "headline-sm": ["Playfair Display"],
+                        "body-md": ["Montserrat"],
+                        "body-lg": ["Montserrat"],
+                        "headline-lg": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "500"}],
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.4)), url('image-hero-studio');
+            background-size: cover;
+            background-position: center;
+        }
+        .masonry {
+            column-count: 1;
+            column-gap: 1.5rem;
+        }
+        @media (min-width: 768px) { .masonry { column-count: 2; } }
+        @media (min-width: 1024px) { .masonry { column-count: 3; } }
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 1.5rem;
+        }
+        .text-stroke-gold {
+            -webkit-text-stroke: 1px #D4AF37;
+            color: transparent;
+        }
+        .custom-shadow {
+            box-shadow: 0 10px 30px -10px rgba(168, 159, 145, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 glass-nav border-b border-outline-variant/30">
+<div class="flex justify-between items-center h-20 px-container-margin-mobile md:px-container-margin-desktop max-w-[1440px] mx-auto">
+<div class="flex items-center gap-4">
+<img alt="Luxe Wellness Logo" class="h-10 w-auto" src="data:image/png;base64,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"/>
+<span class="font-headline-md text-headline-md tracking-tighter text-on-surface uppercase hidden sm:block">LUXE WELLNESS</span>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1" href="#home">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all" href="#services">Programs</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all" href="#about">Wellness</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all" href="#pricing">Pricing</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all" href="#contact">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden md:block bg-primary-container text-on-primary-container px-6 py-2 font-label-md text-label-md hover:bg-primary hover:text-white transition-all active:scale-95">Book Now</button>
+<span class="material-symbols-outlined md:hidden text-on-surface-variant cursor-pointer" data-icon="menu">menu</span>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-screen flex items-center justify-center overflow-hidden bg-[#0a0a0a]" id="home">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-60" data-alt="A cinematic, high-end wellness studio interior with floor-to-ceiling windows overlooking a serene landscape at dusk. The lighting is soft and golden, illuminating professional yoga mats and elegant wooden flooring. The atmosphere is sophisticated and quiet, embodying a luxury sanctuary feel with a focus on feminine empowerment through minimalist design and spaciousness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAi-W8I323q7OMXK0DJdfyTYnnzILvyNHESK5ZaXGpaebsIsoV9L9glLmn5ziCsAWs-lyc_DMsjudoAZptF7f5ZlMkFTk2K7Lrd2s0SNgiGtUiMOVjlGs4NupAq9pnYth2EhEm135vtjARerFq9w1O6u-2w2aiHejGVRxhpeutducOFHI9yNNtDGwzV0DjcDWyDLsHKu92gs4atsuTY1S3oEOVgggSAIKZseGvj6VWwSEEhz-tDkrm9DvUSDk17sk7Evl8axUZPLb0"/>
+</div>
+<div class="relative z-10 max-w-[1440px] px-container-margin-mobile md:px-container-margin-desktop text-center">
+<h1 class="font-headline-lg text-headline-lg-mobile md:text-display-lg text-white mb-6 animate-fade-in">
+                Empowering Every Woman to <span class="text-primary-container italic font-light">Thrive</span>
+</h1>
+<p class="font-body-lg text-body-lg text-white/80 max-w-2xl mx-auto mb-10">
+                A sanctuary for wellness, tailored to your journey. Experience fitness designed exclusively for the feminine spirit.
+            </p>
+<div class="flex flex-col md:flex-row items-center justify-center gap-6">
+<button class="w-full md:w-auto bg-primary-container text-on-primary-container px-10 py-4 font-label-md text-label-md uppercase tracking-widest hover:brightness-110 transition-all active:scale-95 shadow-xl">Book Consultation</button>
+<button class="w-full md:w-auto border border-primary-container text-primary-container px-10 py-4 font-label-md text-label-md uppercase tracking-widest hover:bg-primary-container hover:text-on-primary-container transition-all active:scale-95">Join Now</button>
+<a class="flex items-center gap-2 text-white hover:text-primary-container transition-colors group" href="#">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform" data-icon="chat">chat</span>
+<span class="font-label-md text-label-md">WhatsApp Us</span>
+</a>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+<span class="material-symbols-outlined text-white/50" data-icon="keyboard_double_arrow_down">keyboard_double_arrow_down</span>
+</div>
+</section><section class="py-8 bg-surface-bright border-b border-outline-variant/20">
+<div class="max-w-[1440px] mx-auto px-container-margin-mobile md:px-container-margin-desktop">
+<div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+<a class="flex flex-col items-center gap-2 group" href="tel:#">
+<span class="material-symbols-outlined text-primary-container text-2xl group-hover:scale-110 transition-transform">call</span>
+<span class="font-label-sm text-[10px] tracking-widest uppercase text-on-surface-variant">Call Now</span>
+</a>
+<a class="flex flex-col items-center gap-2 group" href="https://wa.me/yournumber">
+<span class="material-symbols-outlined text-primary-container text-2xl group-hover:scale-110 transition-transform">chat</span>
+<span class="font-label-sm text-[10px] tracking-widest uppercase text-on-surface-variant">WhatsApp</span>
+</a>
+<a class="flex flex-col items-center gap-2 group" href="#">
+<span class="material-symbols-outlined text-primary-container text-2xl group-hover:scale-110 transition-transform">grade</span>
+<span class="font-label-sm text-[10px] tracking-widest uppercase text-on-surface-variant">Google Reviews</span>
+</a>
+<a class="flex flex-col items-center gap-2 group" href="#">
+<span class="material-symbols-outlined text-primary-container text-2xl group-hover:scale-110 transition-transform">verified_user</span>
+<span class="font-label-sm text-[10px] tracking-widest uppercase text-on-surface-variant">Justdial Profile</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Why Choose Us -->
+<section class="py-section-gap px-container-margin-mobile md:px-container-margin-desktop max-w-[1440px] mx-auto">
+<div class="text-center mb-section-gap/2">
+<h2 class="font-headline-lg text-headline-lg mb-4">The Namita Standard</h2>
+<div class="h-1 w-20 bg-primary-container mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="p-8 bg-surface-container-low border border-outline-variant/30 transition-all hover:-translate-y-2 hover:shadow-2xl group">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-6 block" data-icon="female">female</span>
+<h3 class="font-headline-sm text-headline-sm mb-3">Women-only</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">A private, safe, and judgment-free space designed exclusively for women of all backgrounds.</p>
+</div>
+<!-- Card 2 -->
+<div class="p-8 bg-surface-container-low border border-outline-variant/30 transition-all hover:-translate-y-2 hover:shadow-2xl group">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-6 block" data-icon="volunteer_activism">volunteer_activism</span>
+<h3 class="font-headline-sm text-headline-sm mb-3">Beginner Friendly</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Your journey starts where you are. We provide gentle introductions and progressive paths for every level.</p>
+</div>
+<!-- Card 3 -->
+<div class="p-8 bg-surface-container-low border border-outline-variant/30 transition-all hover:-translate-y-2 hover:shadow-2xl group">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-6 block" data-icon="medical_services">medical_services</span>
+<h3 class="font-headline-sm text-headline-sm mb-3">Clinical Support</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Evidence-based approaches to fitness, addressing hormonal changes, recovery, and holistic health.</p>
+</div>
+<!-- Card 4 -->
+<div class="p-8 bg-surface-container-low border border-outline-variant/30 transition-all hover:-translate-y-2 hover:shadow-2xl group">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-6 block" data-icon="verified">verified</span>
+<h3 class="font-headline-sm text-headline-sm mb-3">Certified Guidance</h3>
+<h3 class="font-headline-sm text-headline-sm mb-3">Certified Guidance</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Work with internationally certified experts dedicated to women's physiology and biomechanics.</p>
+</div>
+<!-- Card 5 -->
+<div class="p-8 bg-surface-container-low border border-outline-variant/30 transition-all hover:-translate-y-2 hover:shadow-2xl group">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-6 block" data-icon="person_pin">person_pin</span>
+<h3 class="font-headline-sm text-headline-sm mb-3">Personalized Training</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Programs built around your goals, lifestyle, and medical history for maximum sustainable results.</p>
+</div>
+<!-- Card 6 -->
+<div class="p-8 bg-surface-container-low border border-outline-variant/30 transition-all hover:-translate-y-2 hover:shadow-2xl group">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-6 block" data-icon="vaping_rooms">vaping_rooms</span>
+<h3 class="font-headline-sm text-headline-sm mb-3">Safe Atmosphere</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Impeccable hygiene and a warm, supportive community that feels like home from day one.</p>
+</div>
+</div>
+</section>
+<!-- Founder Story -->
+<section class="py-section-gap bg-surface-container overflow-hidden" id="about">
+<div class="max-w-[1440px] mx-auto px-container-margin-mobile md:px-container-margin-desktop">
+<div class="flex flex-col lg:flex-row items-center gap-20">
+<div class="lg:w-1/2 relative">
+<div class="absolute -top-10 -left-10 w-40 h-40 border-t border-l border-primary-container/30"></div>
+<img class="relative z-10 w-full grayscale hover:grayscale-0 transition-all duration-700 custom-shadow" data-alt="A sophisticated editorial portrait of a professional female fitness founder in a minimalist studio. She is dressed in high-end, modest black athletic wear, standing confidently with soft, warm lighting accentuating her features. The background is a clean champagne beige wall with subtle architectural shadows. The image captures 15 years of professional wisdom and clinical expertise." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0Y3rfjTwdJwGyffZXK6iMGeo_qKF93B-nW9T3eKt3SPhSLFEs2p6JnOx9f0wwDCfveViMp_glMknxr35VYKUOOfcThBRnjXQzZwm2bsumtxE4UKH704LRQ3Hsia_FZuogLRK4JymgshZ8p30WCg5eK5KnQBAXatQe-pJf2PDZTeQrk7uQu8YtbDH5J4EMnn5u1dLku8lwetEwUUmmCwsFtwmEEI3U3fVbCQmQQi3EHF9DADsFeEtimaKMmNdIFKKVIQdoPaDEOC0"/>
+<div class="absolute -bottom-10 -right-10 bg-primary-container p-8 z-20">
+<p class="font-headline-lg text-headline-lg text-on-primary-container">15+</p>
+<p class="font-label-md text-label-md text-on-primary-container uppercase tracking-widest">Years of Expertise</p>
+</div>
+</div>
+<div class="lg:w-1/2">
+<span class="font-label-md text-label-md text-primary tracking-[0.2em] uppercase block mb-6">Our Visionary</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-8">Namita's Mission for the Modern Woman</h2>
+<p class="font-body-lg text-body-lg mb-6 leading-relaxed">
+                        Namita’s Femme Fitness was born from a singular vision: to create a high-end sanctuary where women of all ages can pursue wellness without compromise.
+                    </p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-10 leading-relaxed">
+                        With over 15 years of clinical and field experience, Namita has designed a methodology that respects the complexities of the female body. From high-impact training to therapeutic recovery, every session is a step toward your most confident self.
+                    </p>
+<div class="grid grid-cols-2 gap-8 mb-10">
+<div>
+<span class="font-headline-sm text-headline-sm block mb-1">Elite Certified</span>
+<p class="font-label-sm text-label-sm text-primary uppercase">International Standards</p>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm block mb-1">Award Winning</span>
+<p class="font-label-sm text-label-sm text-primary uppercase">Wellness Studio 2023</p>
+</div>
+</div>
+<button class="bg-black text-white px-10 py-4 font-label-md text-label-md uppercase tracking-widest hover:bg-primary-container hover:text-on-primary-container transition-all">Read More</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-section-gap px-container-margin-mobile md:px-container-margin-desktop max-w-[1440px] mx-auto" id="services">
+<div class="text-center mb-20">
+<h2 class="font-headline-lg text-headline-lg mb-4">Our Specialized Services</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Expertly crafted programs for every stage of your life.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Service Cards -->
+<div class="group relative overflow-hidden bg-surface-container-low custom-shadow">
+<div class="h-[400px] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Close up of a focused woman in elegant personal training session, performing a controlled movement with premium equipment. Soft side lighting and warm ivory studio background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1NiME4v6cktLNJwVb6mtcObnlcSNqUJ0nq7gR7OI15NNkeUBvljAunuFweCemvMIvEm75C1y91HNYKKpk0KNF1xcJmySJFh2brqMdSXDOIvzJtqVRUHjak8i09wDGIAykEMxB2zrKRk9FtRk5AnelnGdZUt0loO_HDPfrb0XxlJo0e2HsoL14cZ7sLhj12yr4Mu84uu-PtHDqdPMHpfzOfXSqJmt4PNQcfHHmveQ-Vq4a75ZfRUzIfIOAmX2Oh1hFc_HN9F70pU4"/>
+</div>
+<div class="p-8">
+<h3 class="font-headline-sm text-headline-sm mb-2">Personal Training</h3>
+<p class="font-label-sm text-label-sm text-primary uppercase mb-4 tracking-widest">One-on-One Mastery</p>
+<a class="inline-flex items-center gap-2 font-label-md text-label-md hover:text-primary transition-colors" href="#">EXPLORE PROGRAM <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></a>
+</div>
+</div>
+<div class="group relative overflow-hidden bg-surface-container-low custom-shadow">
+<div class="h-[400px] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Dynamic group fitness class for women in a bright, spacious studio. The instructor is demonstrating a move with grace and energy. High-end equipment and airy atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBknW2eBzwv751q0Tkv-4uV84YZVIuAtahSV7ggXeq95dBTqmVpbf6PgzfQLSHTXWPcPX-K4fzRyteNz5CeFpTKbmMYiCMtaQdeCORSRbMXWusK13-eEj8MeWao9cJMqvF-vA3nH7b2BuyEYlXv1VfceRN6kh63DfhkFGV-hokay0xDy-toeAl8I_1DMXK9aj1UgOXEydyjkRQ3Lq1j17CrI5MXP1dnDRkYuafdShhNrjncQvfVi6_LN9vaUiesMPniflNtqP8UEv4"/>
+</div>
+<div class="p-8">
+<h3 class="font-headline-sm text-headline-sm mb-2">Group Fitness</h3>
+<p class="font-label-sm text-label-sm text-primary uppercase mb-4 tracking-widest">Collective Energy</p>
+<a class="inline-flex items-center gap-2 font-label-md text-label-md hover:text-primary transition-colors" href="#">EXPLORE PROGRAM <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></a>
+</div>
+</div>
+<div class="group relative overflow-hidden bg-surface-container-low custom-shadow">
+<div class="h-[400px] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Peaceful woman practicing yoga in a sunlit studio with minimalist champagne beige walls. High key lighting and soft shadows creating a zen editorial look." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZKpZPwcPh_Wyu3LQjMht1NQR3eOsUzDMz9jxZ7CDRWn-_y3X_qHyLgH1r95IrGA2PeoUYMBpNRKsWb1JfAomiI-SIaRcdCs6AFxlV04KLKabMw_kYIwYsKbC9IvaA9DuKegkO_-U4r95VzSD7U2FeAnZMYmYsAGYamUHmVOEbhe94m6_mV7_Y4bkTWq9glPmTl0l8GIf_3ebKS_yIW5KylTK0wGj-PzdOV--CkMgh7WU3nwDNLMA1JuzUnFviqTnMC2Y_aWRXEL0"/>
+</div>
+<div class="p-8">
+<h3 class="font-headline-sm text-headline-sm mb-2">Yoga</h3>
+<p class="font-label-sm text-label-sm text-primary uppercase mb-4 tracking-widest">Balance &amp; Flow</p>
+<a class="inline-flex items-center gap-2 font-label-md text-label-md hover:text-primary transition-colors" href="#">EXPLORE PROGRAM <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></a>
+</div>
+</div>
+<!-- More Services (Grid continues) -->
+<div class="group relative overflow-hidden bg-surface-container-low custom-shadow">
+<div class="h-[400px] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Vibrant dance fitness class with women of different ages. Warm, inviting lighting and a sense of joy and community in a luxury fitness setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvyH1gTnV7LwGCr1ctmFfXDIup5e7b6CyY5pdd7_vwjo-It08W5KZgy_u068BFeHdXbNha-MfEr-_49GOarTBaSG59ii92_IZC9Wk0SHHUKK7VvtqmVispqaeqbrLweVm-ctktv9ZiDZIDxIJVwda_nGw_kY_SCjK4PLQtDgSymFFP1C7xvx68PcO3P873gQ73yZWBzjv03iuhMKXO28xRoQ10l5Rh5Zuhe7DJPrW1cb5aGnGuB-amO6r6f6AdwoE5USPgbUJugXc"/>
+</div>
+<div class="p-8">
+<h3 class="font-headline-sm text-headline-sm mb-2">Dance Fitness</h3>
+<p class="font-label-sm text-label-sm text-primary uppercase mb-4 tracking-widest">Joyful Movement</p>
+<a class="inline-flex items-center gap-2 font-label-md text-label-md hover:text-primary transition-colors" href="#">EXPLORE PROGRAM <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></a>
+</div>
+</div>
+<div class="group relative overflow-hidden bg-surface-container-low custom-shadow">
+<div class="h-[400px] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Clinically focused training session with medical equipment integration. A professional trainer monitoring vitals and form in a clean, professional clinical-fitness environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuABHVWem3y8SvjMuxtV526qDkwcVAwM5yiQe2h6yJJ03X_VgwVFLLNS7U04u6u6d9GLNwimPqtT1WJ4XHl1OtbKsbIqODQHmpcm_fqdK0FgP7f3oo8NWwL4SVFJq0iB7WJ3axuyWEG9fcnuF7dPEwHxSUcRv3KlAK7YV0_0Fv4rqcIS2TlecwCMi1VDPC3uXEvIOqUz442YpiELY-Tr5f-PHt2G4aRqIdAuvmk-9mlEk1Ib0Zo5wzoylsgPb_0Yeijn6BpJjckGk1w"/>
+</div>
+<div class="p-8">
+<h3 class="font-headline-sm text-headline-sm mb-2">Clinical Fitness</h3>
+<p class="font-label-sm text-label-sm text-primary uppercase mb-4 tracking-widest">Evidence-Based Health</p>
+<a class="inline-flex items-center gap-2 font-label-md text-label-md hover:text-primary transition-colors" href="#">EXPLORE PROGRAM <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></a>
+</div>
+</div>
+<div class="group relative overflow-hidden bg-surface-container-low custom-shadow">
+<div class="h-[400px] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Gentle pregnancy fitness session with a pregnant woman performing safe stretches under expert guidance. Soft lighting, warm tones, and an atmosphere of safety and nurturing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0uY2ClPrfo-0-TYk_uh5COGy3_W_XYlMMwekXaJ4l8UcHVJGOMs2JliGSWfGdDaJEa4Cyvx5oA2-rAw2go4JqsXO3b27ppsPLSwCkehqW5ALqXhR_xdymy_Mct1Cb4IsbL7ok_tD1W_KkA2ZgS18t5EW6RcdcqBv4JepUwF9hAhk0TKF9TTRiN4UwoUb0A3G4Lm8_u5GYGXzPCoH2X2-bYp8WeIMICLW9LcW_ZvgCNwXLYY8MU1-ylaI9WJuVzhAiesMO2QT5yj4"/>
+</div>
+<div class="p-8">
+<h3 class="font-headline-sm text-headline-sm mb-2">Pregnancy Fitness</h3>
+<p class="font-label-sm text-label-sm text-primary uppercase mb-4 tracking-widest">Motherhood Journey</p>
+<a class="inline-flex items-center gap-2 font-label-md text-label-md hover:text-primary transition-colors" href="#">EXPLORE PROGRAM <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></a>
+</div>
+</div>
+<!-- Three more to reach 9 as requested -->
+<div class="group relative overflow-hidden bg-surface-container-low custom-shadow">
+<div class="h-[400px] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Postpartum wellness session focusing on core recovery and gentle movement. A calm studio setting with warm ivory walls and soft daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEjyU8SAYCMu5TNV_bva0uQApA_CJofyi6pE4HJx0ziLeAirGe05amd8oR6RtAqqZ7qm2O8iDqsbWtt1mZFFl9kag5048d_UXZErV-oTyLKZ6eVZphH_ciPA0aEI0oRTRt1XfQWLJo_1cCVa_ezsCzkhwW1kOobsWfHdPhpF-L9maKUS8jUCde49cQKR2sRLsHuODaBPFkHKUXNdtylInIjfMMFl45KGQTRSYK8Ww3mxA0DvKw-aXkrBTeL6z_3ZHi8T_cs8FRWsU"/>
+</div>
+<div class="p-8">
+<h3 class="font-headline-sm text-headline-sm mb-2">Postpartum Wellness</h3>
+<p class="font-label-sm text-label-sm text-primary uppercase mb-4 tracking-widest">Recovery &amp; Strength</p>
+<a class="inline-flex items-center gap-2 font-label-md text-label-md hover:text-primary transition-colors" href="#">EXPLORE PROGRAM <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></a>
+</div>
+</div>
+<div class="group relative overflow-hidden bg-surface-container-low custom-shadow">
+<div class="h-[400px] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Senior woman practicing mobility exercises with a smile. The lighting is bright and optimistic, showcasing fitness at every age in a luxury studio setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIRo2iKqpalcZTg6Tznr95vXtK847pxN5WqK_Ai8QW95AEVIJ6vGA9D0DIWykdpqq0woCVi2GYBF2rsJDc1_MPDE8ijjOBKpuLwZ2HUV-hB72wAGZ_s_9FizVIeTOq5BH7PCJlESkiaPmeB6wSZ4P1-OXJt48XWiAsMOZwm2_9qBFSL23WKAzXJr6lvSNbUwszqgRNQ89ObbQfV5v7J7sZFQIsCZso0PJKKcQJUFfvauAh6z6E45kuySr4ol4nYcpMbzKYqfUx0f0"/>
+</div>
+<div class="p-8">
+<h3 class="font-headline-sm text-headline-sm mb-2">Senior Fitness</h3>
+<p class="font-label-sm text-label-sm text-primary uppercase mb-4 tracking-widest">Graceful Aging</p>
+<a class="inline-flex items-center gap-2 font-label-md text-label-md hover:text-primary transition-colors" href="#">EXPLORE PROGRAM <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></a>
+</div>
+</div>
+<div class="group relative overflow-hidden bg-surface-container-low custom-shadow">
+<div class="h-[400px] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Luxury massage therapy room with warm golden lighting, high-end linens, and a tranquil aesthetic. Minimalist editorial style, focusing on recovery and peace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-LbNLa7ewI_AaP0oOjYf0bfuZJqa5QKs6fnm8wb_YSr3l_6EMW7bG4WwBcOegbsqE6vDQgRB6Ad0a3lomBpzvlpldzP1maCU3yRal6DX3GILmsXjI7bUt87R_d0GHqxcLjO8NTQUYwLGgKb1xVGY4Ac88Ch26Se6G90sbT0od8liQvgSMtLQzHQ-bFOWnLnTW_RZTPCrrxRf1JJyY6t-rlSmNj3JYzN24BfDLggMrXSP2qgk_IMJhkAAjU9sbqhjisT6TPMBXlIg"/>
+</div>
+<div class="p-8">
+<h3 class="font-headline-sm text-headline-sm mb-2">Massage Therapy</h3>
+<p class="font-label-sm text-label-sm text-primary uppercase mb-4 tracking-widest">Restorative Care</p>
+<a class="inline-flex items-center gap-2 font-label-md text-label-md hover:text-primary transition-colors" href="#">EXPLORE PROGRAM <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></a>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Carousel -->
+<section class="py-12 bg-surface-container-low border-y border-outline-variant/20">
+<div class="max-w-[1440px] mx-auto px-container-margin-mobile md:px-container-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Google Card -->
+<div class="bg-surface-bright p-8 flex flex-col items-center text-center border border-outline-variant/30 custom-shadow">
+<div class="flex items-center gap-2 mb-2">
+<img alt="Google" class="h-6 grayscale opacity-70 group-hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjRGSNyyQtuj9ejeARjlQbGpcAb2GWwnUG0fVlE_pa_4eLpYHR1Sr6XnvT4H3MKFKfeC1L0ABa41zxFKnpy1CslFhWD8Cmp6ICNtq1R-PyJIBkiaOGofvOQlWFUhUT584VflJ5nLL-u6q9OCljU2EaWvBl0q3WZ2rK08YYi2NwpZnE7nKzBGYDmekZPrHsiyTY0ujrFn3N0X1JsqPvbm4-dCtMyd8NsaOSQKWwRmFUyoZSXUcWkA5oWKi4hY6FbcgF36ejE83IY90"/>
+<span class="font-headline-sm text-headline-sm">4.9/5</span>
+</div>
+<div class="flex gap-1 mb-2 text-primary-container">
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface-variant mb-6">250+ Verified Reviews</p>
+<button class="font-label-sm text-label-sm uppercase tracking-widest text-primary-container border-b border-primary-container pb-1 hover:text-primary transition-colors">See Google Reviews</button>
+</div>
+<!-- Justdial Card -->
+<div class="bg-surface-bright p-8 flex flex-col items-center text-center border border-outline-variant/30 custom-shadow">
+<div class="w-12 h-12 bg-primary-container/10 rounded-full flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-primary-container text-3xl">workspace_premium</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-1">Top Rated on Justdial</h3>
+<p class="font-label-md text-label-md text-on-surface-variant mb-6">Certified Luxury Wellness Studio</p>
+<button class="font-label-sm text-label-sm uppercase tracking-widest text-primary-container border-b border-primary-container pb-1 hover:text-primary transition-colors">View Our Justdial Profile</button>
+</div>
+</div>
+</div>
+</section><section class="py-section-gap bg-black text-white overflow-hidden">
+<div class="max-w-[1440px] mx-auto px-container-margin-mobile md:px-container-margin-desktop">
+<h2 class="font-headline-lg text-headline-lg mb-20 text-center">Stories of Transformation</h2>
+<div class="flex transition-transform duration-700 ease-in-out" id="testimonial-slider">
+<div class="min-w-full flex flex-col md:flex-row items-center gap-10 px-4">
+<div class="md:w-1/3">
+<img class="w-48 h-48 rounded-full object-cover mx-auto md:mx-0 border-2 border-primary-container p-2" data-alt="Close up portrait of a glowing, confident woman in her 40s. Editorial style, clean skin, soft lighting, black background with warm gold highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCi-Mh8WX2mmoMNmhgn8nMimpGIcgMWfHyUfsIRgy13XNCh-u_MzEK9n95puFZyboNKadXO5OFRhhCQL4TVMniO_-p8kdP3zDCI-K8PhZ7ve9u0-k-gHi1ry_ju5sHpxkEwHOZqHyUEccTpyvTcJhRG6PyOhjTAKSO2TqnHcbG_vb1lhPHptZXnXCSITVTpJrHVRQUe-xyG4ZxryfT8Wu6seLi70oNjb-1QaX6FvlGzwDrFkBiePqLs6gMdboxmt6_EflJjtTGram4"/>
+</div>
+<div class="md:w-2/3 text-center md:text-left">
+<span class="material-symbols-outlined text-primary-container text-6xl opacity-30 block mb-6" data-icon="format_quote">format_quote</span>
+<p class="font-headline-sm text-headline-sm italic mb-8">"Luxe Wellness changed my perspective on fitness. It's not about the sweat; it's about the sanctuary Namita has built. I feel stronger and more centered than ever."</p>
+<h4 class="font-label-md text-label-md text-primary-container tracking-widest uppercase">Sarah Jenkins</h4>
+<p class="font-label-sm text-label-sm text-white/50">Membership Holder | 2 Years</p>
+</div>
+</div>
+</div>
+<div class="flex justify-center gap-4 mt-12">
+<button class="w-3 h-3 rounded-full bg-primary-container"></button>
+<button class="w-3 h-3 rounded-full bg-white/20 hover:bg-white/40 transition-all"></button>
+<button class="w-3 h-3 rounded-full bg-white/20 hover:bg-white/40 transition-all"></button>
+</div>
+</div>
+</section>
+<!-- Gallery Section -->
+<section class="py-section-gap px-container-margin-mobile md:px-container-margin-desktop max-w-[1440px] mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg mb-4">Inside the Studio</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">A glimpse into our world of wellness.</p>
+</div>
+<div class="masonry">
+<div class="masonry-item">
+<img class="w-full grayscale hover:grayscale-0 transition-all duration-500 rounded-lg" data-alt="Minimalist yoga props arranged neatly on a wooden shelf in a luxury studio. Warm evening light casting long shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyEhWyFuTBZ_Up3KW0-LnpUOfiggqJ8Neh20wdNgotG5S9Dsg3AQkd2jac1zx6_plYIZbd2T1cjcca9WLiJzDxzPsR-afqHt3cghYsFYmeD9pTwn5-Q3A5Z1vX16ZvdLeTwYdiDxhiv24LhNcQrEE4UpLFTPt8WFGM2s7Lz3vqstc-MUV-CgtaPiNmjHmDaBZ4NU_klN6qhD1tOM6KLMvstmwZK8lmZZvPvjBCx7lp8E8C25bSUe4xPoL3F7-WzMTJJYzDlOGL79Y"/>
+</div>
+<div class="masonry-item">
+<img class="w-full grayscale hover:grayscale-0 transition-all duration-500 rounded-lg" data-alt="A group of women laughing after a dance class in a bright, modern studio. High key lighting, candid editorial photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_hszyML6RfnuSRM5rlAT_GnaY2LWr4SIAZJXrq-v_SVurUNi9t2uyFwzhiz2E6fBw9pRE_wpBBbMd-VgTKI4KrElqpO7FbzEr_ZfhZbNSHf7GXmvt9EP8Ev3YBDdEtn-1ltP8aLk550jSyoxg2xNSHJnmIcwwhVebGfsgB8nfMk5N-oiRXpsqeaC2NqEf4AKp6lEvXMZN2fAi36DbQ_hztJC5xsmtw4Gf8dCbVDj77-MGYni5agiJdL_nc-bdj2zEJ6P030VpomY"/>
+</div>
+<div class="masonry-item">
+<img class="w-full grayscale hover:grayscale-0 transition-all duration-500 rounded-lg" data-alt="Close up of high-end clinical fitness equipment in a clean, champagne beige studio setting. Professional and sophisticated vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxrteqwV2J7LMz4uEe0kYPaUs84x8XCCG_ZrrP7QptitW9MndufoFADO4Ar22QlzYU5rUkqNZvhSKwqfiVl06VpGoquvKuHgLguPJmU23lVPFg4z7Fx_nsUFU8ecDUPdi_ETamcYwlpHEWnRRb6mh1Sjpr1JOTFqIAu0LCdXSuuIfuSM7wUTGhchXduwR-yjU6cLFQ7WCyyQ9teks6UjcUu-o4utuBH-rqFEhSJ0AH6feMrqCMdeC-cIS9DIOtFR-7-L4OMxma2nw"/>
+</div>
+<div class="masonry-item">
+<img class="w-full grayscale hover:grayscale-0 transition-all duration-500 rounded-lg" data-alt="Beautifully designed reception area of a luxury wellness club. Gold accents, marble desk, and lush greenery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4OyNuguUfzi_d9x7_0VbARJR9-pd-qxbheMNCjX6-l7qXyrUdQ4OXrPwTd9WDq0U9bVAq2d4gqbOl3nVh_mZCsP8cJkl2Ttdb590n-BdVjizlJNyRNT830QqKwOnZsU5cz_8bilrHREnU-16E-T5OumAVi_WJ6MsnWvB_gyoarx-703Kd0UbFwReXdn3obEvTBOPH4CaKirZbt5_bS41KXIurx-32Jaf-MH6XJLUbP_5dQWO_WXLPTOWW-wEWJ4AtG53wjzCYgik"/>
+</div>
+<div class="masonry-item">
+<img class="w-full grayscale hover:grayscale-0 transition-all duration-500 rounded-lg" data-alt="Artistic shot of a woman performing a yoga pose against a textured ivory wall. Minimalist and empowering composition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDA5tAuUAB4dmdl6SP080HgwVlGXPGjO0BhwbzvuRNNrRRmMCWWe1K4HZOjtmMU0o0Yd0nJn-xi_58y4fuDLaf3KCFpAabnmIEGQTSYHOon47z7GM8h63Ch5z6uNetXZhwHzBocyBBAhtPn00d-F9zY70xgxg7o4mmjLKCvY3cgNOHW2tDjRiuYs6nVoJxIABFI0IIcYwFC6a0XGcgqBQtgcCP4DTyTWNpUTVENiBKlm6nzlOSPPyZMSmfN7ftAHpRdJlUW63oHLIc"/>
+</div>
+<div class="masonry-item">
+<img class="w-full grayscale hover:grayscale-0 transition-all duration-500 rounded-lg" data-alt="Details of the luxury studio: fresh flowers, designer water bottles, and clean white towels on a gold tray." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvuzhn6NjTfomDEBqCX52ofTru9kb3YTY1r09LFGpvmQOshG5g7go2UkWvMXYp51SrHSOrcobt9uRl51xBPnFyrqg6TM1nksc0CyPv6PGis7usco9BKbDOIISl3YcVuUl2nupWoCKJrpQo5AZtXKvGxDgzWoQsTWJPxSnzjvHLvzHAM3xKVs_m_wSzL3-56w_ShScFq_ROQ9A6zCjvrOkm3vcBkwTwmHkwsHoS4KbGAGjAe-3DoQ0oGu1H5IiqtB7wpVd5JDbB3ro"/>
+</div>
+</div>
+</section>
+<!-- Pricing Section -->
+<section class="py-section-gap bg-surface-container-low" id="pricing">
+<div class="max-w-[1440px] mx-auto px-container-margin-mobile md:px-container-margin-desktop">
+<div class="text-center mb-20">
+<h2 class="font-headline-lg text-headline-lg mb-4">Investment in Yourself</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Transparent pricing for premium care.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter items-center">
+<!-- Tier 1 -->
+<div class="p-10 bg-surface-bright border border-outline-variant/30 flex flex-col h-full hover:shadow-xl transition-all">
+<h3 class="font-headline-sm text-headline-sm mb-2">Initial Consultation</h3>
+<p class="text-primary font-headline-lg text-headline-lg mb-8">$75<span class="text-body-md font-normal text-on-surface-variant"> /session</span></p>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-3 font-body-md text-on-surface-variant"><span class="material-symbols-outlined text-primary text-sm" data-icon="check">check</span> Full Health Audit</li>
+<li class="flex items-center gap-3 font-body-md text-on-surface-variant"><span class="material-symbols-outlined text-primary text-sm" data-icon="check">check</span> Goal Setting Session</li>
+<li class="flex items-center gap-3 font-body-md text-on-surface-variant"><span class="material-symbols-outlined text-primary text-sm" data-icon="check">check</span> Body Bio-typing</li>
+</ul>
+<button class="w-full border border-black py-4 font-label-md text-label-md uppercase tracking-widest hover:bg-black hover:text-white transition-all">Book Session</button>
+</div>
+<!-- Tier 2 (Highlighted) -->
+<div class="p-12 bg-black text-white flex flex-col h-full transform scale-105 relative z-10 shadow-2xl">
+<div class="absolute top-0 right-0 bg-primary-container text-on-primary-container px-6 py-2 font-label-sm text-label-sm uppercase tracking-widest">Popular Choice</div>
+<h3 class="font-headline-sm text-headline-sm mb-2">Signature Membership</h3>
+<p class="text-primary-container font-headline-lg text-headline-lg mb-8">$299<span class="text-body-md font-normal text-white/60"> /month</span></p>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-3 font-body-md text-white/80"><span class="material-symbols-outlined text-primary-container text-sm" data-icon="check">check</span> Unlimited Group Classes</li>
+<li class="flex items-center gap-3 font-body-md text-white/80"><span class="material-symbols-outlined text-primary-container text-sm" data-icon="check">check</span> 2 Personal Training Sessions</li>
+<li class="flex items-center gap-3 font-body-md text-white/80"><span class="material-symbols-outlined text-primary-container text-sm" data-icon="check">check</span> Monthly Health Review</li>
+<li class="flex items-center gap-3 font-body-md text-white/80"><span class="material-symbols-outlined text-primary-container text-sm" data-icon="check">check</span> Spa &amp; Sauna Access</li>
+</ul>
+<button class="w-full bg-primary-container text-on-primary-container py-4 font-label-md text-label-md uppercase tracking-widest hover:brightness-110 transition-all">Join The Club</button>
+</div>
+<!-- Tier 3 -->
+<div class="p-10 bg-surface-bright border border-outline-variant/30 flex flex-col h-full hover:shadow-xl transition-all">
+<h3 class="font-headline-sm text-headline-sm mb-2">Elite Collective</h3>
+<p class="text-primary font-headline-lg text-headline-lg mb-8">$550<span class="text-body-md font-normal text-on-surface-variant"> /month</span></p>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-3 font-body-md text-on-surface-variant"><span class="material-symbols-outlined text-primary text-sm" data-icon="check">check</span> Daily Personal Training</li>
+<li class="flex items-center gap-3 font-body-md text-on-surface-variant"><span class="material-symbols-outlined text-primary text-sm" data-icon="check">check</span> Clinical Specialist Support</li>
+<li class="flex items-center gap-3 font-body-md text-on-surface-variant"><span class="material-symbols-outlined text-primary text-sm" data-icon="check">check</span> Private Locker &amp; Lounge</li>
+<li class="flex items-center gap-3 font-body-md text-on-surface-variant"><span class="material-symbols-outlined text-primary text-sm" data-icon="check">check</span> Concierge Wellness Plan</li>
+</ul>
+<button class="w-full border border-black py-4 font-label-md text-label-md uppercase tracking-widest hover:bg-black hover:text-white transition-all">Request Invite</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact & Community -->
+<section class="py-section-gap px-container-margin-mobile md:px-container-margin-desktop max-w-[1440px] mx-auto" id="contact">
+<div class="flex flex-col lg:flex-row gap-20">
+<div class="lg:w-1/2">
+<h2 class="font-headline-lg text-headline-lg mb-8">Begin Your Journey</h2>
+<form class="space-y-8">
+<div class="relative">
+<label class="font-label-sm text-label-sm text-on-surface uppercase mb-2 block">Your Name</label>
+<input class="w-full border-0 border-b border-black bg-transparent py-3 px-0 focus:ring-0 focus:border-primary-container transition-all" placeholder="Enter your full name" type="text"/>
+</div>
+<div class="relative">
+<label class="font-label-sm text-label-sm text-on-surface uppercase mb-2 block">Email Address</label>
+<input class="w-full border-0 border-b border-black bg-transparent py-3 px-0 focus:ring-0 focus:border-primary-container transition-all" placeholder="Enter your email address" type="email"/>
+</div>
+<div class="relative">
+<label class="font-label-sm text-label-sm text-on-surface uppercase mb-2 block">Message</label>
+<textarea class="w-full border-0 border-b border-black bg-transparent py-3 px-0 focus:ring-0 focus:border-primary-container transition-all resize-none" placeholder="How can we help you?" rows="4"></textarea>
+</div>
+<button class="bg-black text-white px-12 py-5 font-label-md text-label-md uppercase tracking-widest hover:bg-primary transition-all">Send Inquiry</button>
+</form>
+</div>
+<div class="lg:w-1/2 flex flex-col gap-12">
+<div class="space-y-6">
+<h3 class="font-headline-sm text-headline-sm">Connect With Us</h3>
+<div class="flex items-center gap-4 group cursor-pointer">
+<div class="w-12 h-12 bg-primary-container/20 flex items-center justify-center rounded-full group-hover:bg-primary-container transition-all">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+</div>
+<p class="font-body-md text-body-md">123 Wellness Blvd, Luxury District, NY 10001</p>
+</div>
+<div class="flex items-center gap-4 group cursor-pointer">
+<div class="w-12 h-12 bg-primary-container/20 flex items-center justify-center rounded-full group-hover:bg-primary-container transition-all">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+</div>
+<p class="font-body-md text-body-md">+1 (555) 987-6543</p>
+</div>
+<div class="flex items-center gap-4 group cursor-pointer">
+<div class="w-12 h-12 bg-primary-container/20 flex items-center justify-center rounded-full group-hover:bg-primary-container transition-all">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+</div>
+<p class="font-body-md text-body-md">Chat via WhatsApp</p>
+</div>
+</div>
+<div class="h-[300px] w-full bg-surface-container rounded-lg overflow-hidden grayscale contrast-125 border border-outline-variant/30">
+<img class="w-full h-full object-cover" data-alt="A stylized, minimalist architectural map showing the location of a luxury business in a high-end city district. Neutral tones, clean lines, and a subtle golden marker for the location." data-location="New York City" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBH6iiqYgf0fX51VZF5-X52la_SDxdAKPOGi-n5vsG3S6bWIO4H82LTxlwRAwB7SqgJahOS1Q9QnAy0x0OTEc1GTBBUdWYSY1tDer6n0fuDBjkEGYF61974sYXJoAeqBdYVSXyP4wXyj5apGIzpQgzPDHPpE4DTvBZPH9Qs1Ojdlcn7bLMvz6ZogRpSJ1ds9H67gJRJITO0A-55MVgqYw3pGmcRFICJT8TFskmFe92wG0SFBZv_Z1eHeVmso192dPTLGG7NLU3LELA"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-low border-t border-outline-variant/20 pt-20 pb-10">
+<div class="max-w-[1440px] mx-auto px-container-margin-mobile md:px-container-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter mb-20">
+<div class="md:col-span-1">
+<img alt="Luxe Wellness Logo" class="h-12 w-auto mb-6" src="data:image/png;base64,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"/>
+<h2 class="font-headline-sm text-headline-sm text-on-surface uppercase tracking-widest mb-4">LUXE WELLNESS STUDIO</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Elevating women's wellness through clinical expertise and luxury sanctuary design.</p>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-primary uppercase tracking-widest mb-8">Navigation</h4>
+<ul class="space-y-4">
+<li><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">About Our Studio</a></li>
+<li><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Services &amp; Programs</a></li>
+<li><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Client Testimonials</a></li>
+<li><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Latest Workshops</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-primary uppercase tracking-widest mb-8">Privacy &amp; Legals</h4>
+<ul class="space-y-4">
+<li><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Cookie Preferences</a></li>
+<li><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Membership Agreement</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-primary uppercase tracking-widest mb-8">Follow Our Journey</h4>
+<div class="flex gap-4">
+<a class="w-10 h-10 border border-outline-variant flex items-center justify-center hover:bg-black hover:text-white transition-all" href="#"><span class="material-symbols-outlined" data-icon="star">star</span></a>
+<a class="w-10 h-10 border border-outline-variant flex items-center justify-center hover:bg-black hover:text-white transition-all" href="#"><span class="material-symbols-outlined" data-icon="photo_camera">photo_camera</span></a>
+<a class="w-10 h-10 border border-outline-variant flex items-center justify-center hover:bg-black hover:text-white transition-all" href="#"><span class="material-symbols-outlined" data-icon="movie">movie</span></a>
+</div>
+</div>
+</div>
+<div class="text-center border-t border-outline-variant/10 pt-10">
+<p class="font-label-sm text-label-sm text-on-surface-variant opacity-60 uppercase tracking-[0.3em]">© 2024 LUXE WELLNESS STUDIO. ALL RIGHTS RESERVED.</p>
+</div>
+</footer>
+<!-- FAB for quick contact -->
+<div class="fixed bottom-8 right-8 flex flex-col items-end z-50">
+<div class="group relative">
+<div class="absolute -top-12 right-0 bg-black text-white px-4 py-1.5 text-[10px] tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">Chat With Us</div>
+<a class="relative w-16 h-16 bg-primary-container text-on-primary-container rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all" href="https://wa.me/yournumber" target="_blank">
+<div class="absolute inset-0 rounded-full bg-primary-container animate-ping opacity-20"></div>
+<span class="material-symbols-outlined text-3xl">chat</span>
+</a>
+</div>
+</div>
+<script>
+        // Simple scroll reveal interaction
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+
+        // Navigation state handler
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('h-16', 'shadow-md');
+                nav.classList.remove('h-20');
+            } else {
+                nav.classList.add('h-20');
+                nav.classList.remove('h-16', 'shadow-md');
+            }
+        });
+    </script>
+</body></html>
