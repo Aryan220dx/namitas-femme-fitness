@@ -39,8 +39,8 @@ export function Hero() {
           <ButtonLink href="#contact" variant="secondary" size="lg" className="w-full md:w-auto">
             Book Consultation
           </ButtonLink>
-          <ButtonLink href="#pricing" variant="light" size="lg" className="w-full md:w-auto">
-            Join Now
+          <ButtonLink href="#services" variant="light" size="lg" className="w-full md:w-auto">
+            Explore Programs
           </ButtonLink>
           <a href={BUSINESS_INFO.whatsapp} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-white transition-colors hover:text-gold-light">
             <MessageCircle className="h-4 w-4" /> WhatsApp Us

@@ -2,7 +2,6 @@ import { ContactSection } from "@/components/sections/ContactSection";
 import { FounderSection } from "@/components/sections/FounderSection";
 import { GalleryMasonry } from "@/components/sections/GalleryMasonry";
 import { Hero } from "@/components/sections/Hero";
-import { PricingSection } from "@/components/sections/PricingSection";
 import { QuickContactBar } from "@/components/sections/QuickContactBar";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { TestimonialsCarousel } from "@/components/sections/TestimonialsCarousel";
@@ -20,7 +19,6 @@ export default function Home() {
       <TrustSection />
       <TestimonialsCarousel />
       <GalleryMasonry />
-      <PricingSection />
       <ContactSection />
     </main>
   );

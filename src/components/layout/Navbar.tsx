@@ -39,6 +39,9 @@ export function Navbar() {
             priority
             className="hidden h-16 w-16 rounded-sm object-contain sm:block"
           />
+          <span className="ml-3 max-w-[8rem] font-serif text-sm font-semibold leading-tight text-gold-light sm:max-w-none sm:text-base md:text-lg">
+            Namita&apos;s Femme Fitness
+          </span>
         </a>
 
         <div className="hidden items-center gap-8 md:flex">

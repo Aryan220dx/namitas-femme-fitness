@@ -22,7 +22,7 @@ export const SITE_ASSETS = {
   },
   founder: {
     portrait: {
-      src: "https://lh3.googleusercontent.com/aida-public/AB6AXuD0Y3rfjTwdJwGyffZXK6iMGeo_qKF93B-nW9T3eKt3SPhSLFEs2p6JnOx9f0wwDCfveViMp_glMknxr35VYKUOOfcThBRnjXQzZwm2bsumtxE4UKH704LRQ3Hsia_FZuogLRK4JymgshZ8p30WCg5eK5KnQBAXatQe-pJf2PDZTeQrk7uQu8YtbDH5J4EMnn5u1dLku8lwetEwUUmmCwsFtwmEEI3U3fVbCQmQQi3EHF9DADsFeEtimaKMmNdIFKKVIQdoPaDEOC0",
+      src: "/images/founder/namita-founder.jpeg",
       alt: "Editorial portrait of Namita, founder of Namita's Femme Fitness.",
     },
   },
@@ -68,37 +68,10 @@ export const SITE_ASSETS = {
       alt: "Luxury massage therapy room with warm golden lighting.",
     },
   },
-  galleryImages: [
-    {
-      src: "https://lh3.googleusercontent.com/aida-public/AB6AXuAyEhWyFuTBZ_Up3KW0-LnpUOfiggqJ8Neh20wdNgotG5S9Dsg3AQkd2jac1zx6_plYIZbd2T1cjcca9WLiJzDxzPsR-afqHt3cghYsFYmeD9pTwn5-Q3A5Z1vX16ZvdLeTwYdiDxhiv24LhNcQrEE4UpLFTPt8WFGM2s7Lz3vqstc-MUV-CgtaPiNmjHmDaBZ4NU_klN6qhD1tOM6KLMvstmwZK8lmZZvPvjBCx7lp8E8C25bSUe4xPoL3F7-WzMTJJYzDlOGL79Y",
-      alt: "Minimalist yoga props arranged in warm evening light.",
-    },
-    {
-      src: "https://lh3.googleusercontent.com/aida-public/AB6AXuC_hszyML6RfnuSRM5rlAT_GnaY2LWr4SIAZJXrq-v_SVurUNi9t2uyFwzhiz2E6fBw9pRE_wpBBbMd-VgTKI4KrElqpO7FbzEr_ZfhZbNSHf7GXmvt9EP8Ev3YBDdEtn-1ltP8aLk550jSyoxg2xNSHJnmIcwwhVebGfsgB8nfMk5N-oiRXpsqeaC2NqEf4AKp6lEvXMZN2fAi36DbQ_hztJC5xsmtw4Gf8dCbVDj77-MGYni5agiJdL_nc-bdj2zEJ6P030VpomY",
-      alt: "Women laughing after a dance class in a bright studio.",
-    },
-    {
-      src: "https://lh3.googleusercontent.com/aida-public/AB6AXuCxrteqwV2J7LMz4uEe0kYPaUs84x8XCCG_ZrrP7QptitW9MndufoFADO4Ar22QlzYU5rUkqNZvhSKwqfiVl06VpGoquvKuHgLguPJmU23lVPFg4z7Fx_nsUFU8ecDUPdi_ETamcYwlpHEWnRRb6mh1Sjpr1JOTFqIAu0LCdXSuuIfuSM7wUTGhchXduwR-yjU6cLFQ7WCyyQ9teks6UjcUu-o4utuBH-rqFEhSJ0AH6feMrqCMdeC-cIS9DIOtFR-7-L4OMxma2nw",
-      alt: "Clinical fitness equipment in a champagne beige studio.",
-    },
-    {
-      src: "https://lh3.googleusercontent.com/aida-public/AB6AXuB4OyNuguUfzi_d9x7_0VbARJR9-pd-qxbheMNCjX6-l7qXyrUdQ4OXrPwTd9WDq0U9bVAq2d4gqbOl3nVh_mZCsP8cJkl2Ttdb590n-BdVjizlJNyRNT830QqKwOnZsU5cz_8bilrHREnU-16E-T5OumAVi_WJ6MsnWvB_gyoarx-703Kd0UbFwReXdn3obEvTBOPH4CaKirZbt5_bS41KXIurx-32Jaf-MH6XJLUbP_5dQWO_WXLPTOWW-wEWJ4AtG53wjzCYgik",
-      alt: "Luxury wellness reception area with gold accents.",
-    },
-    {
-      src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDA5tAuUAB4dmdl6SP080HgwVlGXPGjO0BhwbzvuRNNrRRmMCWWe1K4HZOjtmMU0o0Yd0nJn-xi_58y4fuDLaf3KCFpAabnmIEGQTSYHOon47z7GM8h63Ch5z6uNetXZhwHzBocyBBAhtPn00d-F9zY70xgxg7o4mmjLKCvY3cgNOHW2tDjRiuYs6nVoJxIABFI0IIcYwFC6a0XGcgqBQtgcCP4DTyTWNpUTVENiBKlm6nzlOSPPyZMSmfN7ftAHpRdJlUW63oHLIc",
-      alt: "Woman performing a yoga pose against an ivory wall.",
-    },
-    {
-      src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBvuzhn6NjTfomDEBqCX52ofTru9kb3YTY1r09LFGpvmQOshG5g7go2UkWvMXYp51SrHSOrcobt9uRl51xBPnFyrqg6TM1nksc0CyPv6PGis7usco9BKbDOIISl3YcVuUl2nupWoCKJrpQo5AZtXKvGxDgzWoQsTWJPxSnzjvHLvzHAM3xKVs_m_wSzL3-56w_ShScFq_ROQ9A6zCjvrOkm3vcBkwTwmHkwsHoS4KbGAGjAe-3DoQ0oGu1H5IiqtB7wpVd5JDbB3ro",
-      alt: "Studio details with flowers, towels, and gold tray.",
-    },
-  ],
 } satisfies {
   branding: Record<"logoFull" | "logoCompact", ImageAsset>;
   hero: Record<"heroImage", ImageAsset>;
   founder: Record<"portrait", ImageAsset>;
   mapPreview: ImageAsset;
   programImages: Record<string, ImageAsset>;
-  galleryImages: ImageAsset[];
 };
