@@ -41,7 +41,7 @@ export function FounderSection() {
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Physiology-Aware Care</p>
             </div>
           </div>
-          <ButtonLink href="#contact">Meet Namita</ButtonLink>
+          <ButtonLink href="#founder">Meet Dr. Namita</ButtonLink>
         </motion.div>
       </div>
     </SectionWrapper>

@@ -1,4 +1,5 @@
 import { ContactSection } from "@/components/sections/ContactSection";
+import { FounderExperience } from "@/components/founder/FounderExperience";
 import { FounderSection } from "@/components/sections/FounderSection";
 import { GalleryMasonry } from "@/components/sections/GalleryMasonry";
 import { Hero } from "@/components/sections/Hero";
@@ -15,6 +16,7 @@ export default function Home() {
       <QuickContactBar />
       <WhyChooseUs />
       <FounderSection />
+      <FounderExperience />
       <ServicesSection />
       <TrustSection />
       <TestimonialsCarousel />

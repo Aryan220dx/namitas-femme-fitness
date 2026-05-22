@@ -1,8 +1,10 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { BUSINESS_INFO } from "@/data/business";
 import { NAV_ITEMS } from "@/data/nav";
 import { SITE_ASSETS } from "@/data/siteAssets";
@@ -13,6 +15,39 @@ import { ButtonLink } from "../ui/Button";
 export function Navbar() {
   const scrolled = useNavbarScroll();
   const [open, setOpen] = useState(false);
+  const [activeHash, setActiveHash] = useState("");
+  const pathname = usePathname();
+
+  useEffect(() => {
+    const syncActiveHash = () => {
+      if (window.location.hash) {
+        setActiveHash(window.location.hash);
+        return;
+      }
+
+      setActiveHash(pathname === "/founder" ? "#founder" : "#home");
+    };
+
+    syncActiveHash();
+    window.addEventListener("hashchange", syncActiveHash);
+    return () => window.removeEventListener("hashchange", syncActiveHash);
+  }, [pathname]);
+
+  const handleNavClick = (href: string) => {
+    const hash = href.includes("#") ? `#${href.split("#")[1]}` : "";
+    if (hash) {
+      setActiveHash(hash);
+    }
+    setOpen(false);
+  };
+
+  const isActive = (href: string) => {
+    const hash = href.includes("#") ? `#${href.split("#")[1]}` : "";
+    if (href === "/founder") {
+      return pathname === "/founder";
+    }
+    return Boolean(hash && hash === activeHash);
+  };
 
   return (
     <header
@@ -22,7 +57,7 @@ export function Navbar() {
       )}
     >
       <nav className="section-container flex h-20 items-center justify-between px-container-sm md:px-container" aria-label="Main navigation">
-        <a href="#home" className="group flex h-14 items-center" aria-label="Namita's Femme Fitness home">
+        <Link href="/#home" className="group flex h-14 items-center" aria-label="Namita's Femme Fitness home">
           <Image
             src={SITE_ASSETS.branding.logoCompact.src}
             alt={SITE_ASSETS.branding.logoCompact.alt}
@@ -42,11 +77,20 @@ export function Navbar() {
           <span className="ml-3 max-w-[8rem] font-serif text-sm font-semibold leading-tight text-gold-light sm:max-w-none sm:text-base md:text-lg">
             Namita&apos;s Femme Fitness
           </span>
-        </a>
+        </Link>
 
         <div className="hidden items-center gap-8 md:flex">
           {NAV_ITEMS.map((item) => (
-            <a key={item.href} href={item.href} className="font-sans text-xs font-semibold uppercase tracking-[0.18em] transition-colors hover:text-gold-light">
+            <a
+              key={item.href}
+              href={item.href}
+              aria-current={isActive(item.href) ? "page" : undefined}
+              onClick={() => handleNavClick(item.href)}
+              className={cn(
+                "font-sans text-xs font-semibold uppercase tracking-[0.18em] transition-colors hover:text-gold-light",
+                isActive(item.href) && "text-gold-light",
+              )}
+            >
               {item.label}
             </a>
           ))}
@@ -72,7 +116,13 @@ export function Navbar() {
         <div className="border-t border-ink-border/30 bg-ivory px-container-sm py-5 text-ink md:hidden">
           <div className="flex flex-col gap-4">
             {NAV_ITEMS.map((item) => (
-              <a key={item.href} href={item.href} className="py-2 text-sm font-semibold uppercase tracking-[0.18em]" onClick={() => setOpen(false)}>
+              <a
+                key={item.href}
+                href={item.href}
+                aria-current={isActive(item.href) ? "page" : undefined}
+                className={cn("py-2 text-sm font-semibold uppercase tracking-[0.18em] transition-colors", isActive(item.href) && "text-gold")}
+                onClick={() => handleNavClick(item.href)}
+              >
                 {item.label}
               </a>
             ))}
