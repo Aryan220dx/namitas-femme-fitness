@@ -204,7 +204,6 @@ export function ContactSection() {
               </a>
             ))}
             <p className="pl-16 text-sm leading-6 text-ink-muted">{getTimingsText()}</p>
-            <p className="pl-16 text-sm leading-6 text-ink-muted">Consultation fee: {BUSINESS_INFO.consultationFee}</p>
           </div>
           <address className="sr-only">{getAddressLines().join(", ")}</address>
           <MapEmbed src={BUSINESS_INFO.mapsEmbed} />

@@ -24,7 +24,6 @@ export type BusinessInfo = {
   googleReviews: string;
   address: BusinessAddress;
   timings: BusinessTimings;
-  consultationFee: string;
   mapsEmbed: string;
 };
 
@@ -59,8 +58,6 @@ export const BUSINESS_INFO: BusinessInfo = {
     morning: "6:00 AM – 1:00 PM",
     evening: "4:00 PM – 8:00 PM",
   },
-
-  consultationFee: "₹200",
 
   mapsEmbed: "",
 };

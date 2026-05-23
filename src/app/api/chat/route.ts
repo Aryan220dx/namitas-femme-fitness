@@ -37,6 +37,11 @@ function formatAssistantResponse(content: string) {
     .slice(0, 1600);
 }
 
+function needsDirectConsultationDetails(content: string) {
+  const normalized = content.toLowerCase();
+  return /consultation|consult/.test(normalized) && /fee|fees|price|pricing|cost|charge|charges|rate|rates|amount|rs|₹/.test(normalized);
+}
+
 export async function POST(request: Request) {
   const apiKey = process.env.GROQ_API_KEY;
   const hasGroqApiKey = Boolean(apiKey?.trim());
@@ -55,6 +60,14 @@ export async function POST(request: Request) {
 
     if (!history.length) {
       return fallback("Please send a message so I can help.", 400);
+    }
+
+    const latestUserMessage = [...history].reverse().find((message) => message.role === "user");
+
+    if (latestUserMessage && needsDirectConsultationDetails(latestUserMessage.content)) {
+      return fallback(
+        "We'd be happy to discuss consultation details directly with you. Please contact us via WhatsApp or phone for the latest information.",
+      );
     }
 
     const groq = new Groq({ apiKey, timeout: CHATBOT_CONFIG.timeoutMs });
