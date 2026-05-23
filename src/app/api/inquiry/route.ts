@@ -20,11 +20,11 @@ export async function POST(req: Request) {
     console.log("Resend API Key Loaded:", !!process.env.RESEND_API_KEY);
 
     const { error } = await resend.emails.send({
-      from: "onboarding@resend.dev",
+      from: "hello@namitasfemmefitness.in",
 
       // IMPORTANT:
       // Must be your Resend account email during sandbox mode
-      to: "githubrepo220@gmail.com",
+      to: "namitaaspartan@gmail.com",
 
       replyTo: email,
 
