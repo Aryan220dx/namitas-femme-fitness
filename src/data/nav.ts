@@ -6,14 +6,19 @@ export type NavItem = {
 export const NAV_ITEMS: NavItem[] = [
   { label: "Home", href: "/#home" },
   { label: "Programs", href: "/#services" },
-  { label: "Founder", href: "#founder" },
-  { label: "Wellness", href: "/#about" },
+  { label: "Founder", href: "/our-founder" },
+  { label: "Transformations", href: "/transformations" },
+  { label: "Associations", href: "/associations" },
   { label: "Contact", href: "/#contact" },
 ];
 
 export const FOOTER_NAV = [
   { label: "About Our Studio", href: "/#about" },
-  { label: "Meet Dr. Namita", href: "/#founder" },
+  { label: "Meet Dr. Namita", href: "/our-founder" },
+  { label: "Transformations", href: "/transformations" },
+  { label: "Associations", href: "/associations" },
+  { label: "Community Service", href: "/community-service" },
+  { label: "Our Team", href: "/our-team" },
   { label: "Services & Programs", href: "/#services" },
   { label: "Client Testimonials", href: "/#testimonials" },
   { label: "Begin Your Journey", href: "/#contact" },

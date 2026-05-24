@@ -25,7 +25,7 @@ export function Navbar() {
         return;
       }
 
-      setActiveHash(pathname === "/founder" ? "#founder" : "#home");
+      setActiveHash(pathname === "/" ? "#home" : "");
     };
 
     syncActiveHash();
@@ -43,10 +43,13 @@ export function Navbar() {
 
   const isActive = (href: string) => {
     const hash = href.includes("#") ? `#${href.split("#")[1]}` : "";
-    if (href === "/founder") {
-      return pathname === "/founder";
+    const path = href.split("#")[0] || pathname;
+
+    if (hash) {
+      return pathname === path && hash === activeHash;
     }
-    return Boolean(hash && hash === activeHash);
+
+    return pathname === href;
   };
 
   return (
@@ -79,9 +82,9 @@ export function Navbar() {
           </span>
         </Link>
 
-        <div className="hidden items-center gap-8 md:flex">
+        <div className="hidden items-center gap-5 lg:flex xl:gap-8">
           {NAV_ITEMS.map((item) => (
-            <a
+            <Link
               key={item.href}
               href={item.href}
               aria-current={isActive(item.href) ? "page" : undefined}
@@ -92,17 +95,17 @@ export function Navbar() {
               )}
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </div>
 
         <div className="flex items-center gap-3">
-          <ButtonLink href={BUSINESS_INFO.whatsapp} target="_blank" rel="noopener noreferrer" variant="secondary" size="sm" className="hidden md:inline-flex">
+          <ButtonLink href={BUSINESS_INFO.whatsapp} target="_blank" rel="noopener noreferrer" variant="secondary" size="sm" className="hidden lg:inline-flex">
             Book Now
           </ButtonLink>
           <button
             type="button"
-            className="inline-flex h-11 w-11 items-center justify-center rounded-sm border border-current md:hidden"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-sm border border-current lg:hidden"
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             onClick={() => setOpen((value) => !value)}
@@ -113,10 +116,10 @@ export function Navbar() {
       </nav>
 
       {open ? (
-        <div className="border-t border-ink-border/30 bg-ivory px-container-sm py-5 text-ink md:hidden">
+        <div className="border-t border-ink-border/30 bg-ivory px-container-sm py-5 text-ink lg:hidden">
           <div className="flex flex-col gap-4">
             {NAV_ITEMS.map((item) => (
-              <a
+              <Link
                 key={item.href}
                 href={item.href}
                 aria-current={isActive(item.href) ? "page" : undefined}
@@ -124,7 +127,7 @@ export function Navbar() {
                 onClick={() => handleNavClick(item.href)}
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
             <ButtonLink href={BUSINESS_INFO.whatsapp} target="_blank" rel="noopener noreferrer" variant="secondary" className="mt-2">
               Book Now

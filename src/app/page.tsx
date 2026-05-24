@@ -1,5 +1,4 @@
 import { ContactSection } from "@/components/sections/ContactSection";
-import { FounderExperience } from "@/components/founder/FounderExperience";
 import { FounderSection } from "@/components/sections/FounderSection";
 import { GalleryMasonry } from "@/components/sections/GalleryMasonry";
 import { Hero } from "@/components/sections/Hero";
@@ -8,6 +7,7 @@ import { ServicesSection } from "@/components/sections/ServicesSection";
 import { TestimonialsCarousel } from "@/components/sections/TestimonialsCarousel";
 import { TrustSection } from "@/components/sections/TrustSection";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
+import { FounderHomeStory } from "@/components/story/FounderHomeStory";
 
 export default function Home() {
   return (
@@ -16,7 +16,7 @@ export default function Home() {
       <QuickContactBar />
       <WhyChooseUs />
       <FounderSection />
-      <FounderExperience />
+      <FounderHomeStory />
       <ServicesSection />
       <TrustSection />
       <TestimonialsCarousel />
