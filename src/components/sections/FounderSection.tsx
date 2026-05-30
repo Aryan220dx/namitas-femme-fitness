@@ -43,7 +43,7 @@ export function FounderSection() {
           </div>
           <div className="flex flex-col gap-4 sm:flex-row">
             <ButtonLink href="/our-founder">Meet Dr. Namita</ButtonLink>
-            <ButtonLink href="/our-team" variant="outline">
+            <ButtonLink href="/team" variant="outline">
               Meet The Team
             </ButtonLink>
           </div>

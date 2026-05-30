@@ -18,7 +18,7 @@ export const FOOTER_NAV = [
   { label: "Transformations", href: "/transformations" },
   { label: "Associations", href: "/associations" },
   { label: "Community Service", href: "/community-service" },
-  { label: "Our Team", href: "/our-team" },
+  { label: "Our Team", href: "/team" },
   { label: "Services & Programs", href: "/#services" },
   { label: "Client Testimonials", href: "/#testimonials" },
   { label: "Begin Your Journey", href: "/#contact" },

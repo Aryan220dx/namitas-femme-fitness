@@ -288,30 +288,22 @@ export const TEAM = [
       alt: "Priyanka Jadhav, Senior Trainer at Namita's Femme Fitness.",
     },
     intro:
-      "Priyanka brings the discipline of a competitive athlete into the training floor. With a strong background in Basketball, Netball, and Handball, she coaches with composure, intensity, and a grounded belief in steady progress.",
+      "Priyanka brings the poise of a medal-winning athlete to the training floor. Her coaching is disciplined, composed, and built for women who want focused progress without noise.",
     groups: [
       {
-        title: "Athletic Foundation",
+        title: "Competitive Foundation",
         items: [
-          "Basketball, Netball, and Handball shaped her movement intelligence and team-first discipline.",
-          "Bronze medalist at the Senior National Netball Championship.",
-          "Represented across 15 Inter-University South Zone and All India tournaments.",
-        ],
-      },
-      {
-        title: "Competitive Recognition",
-        items: [
-          "Recognized through MVP, Best Shooter, and Best Player awards.",
-          "Best Player award at the Kerala Handball South Zone Tournament in 2026.",
-          "Carries tournament-tested confidence into every session she leads.",
+          "National Netball Bronze Medalist.",
+          "South Zone and All India participant.",
+          "Multiple MVP and Best Player awards.",
         ],
       },
       {
         title: "Leadership",
         items: [
-          "Led teams as Captain with calm authority and accountability.",
-          "Served as Sports Secretary at JSS College.",
-          "Builds training environments where discipline feels motivating, not intimidating.",
+          "Team Captain with a steady, accountable presence.",
+          "Served as Sports Secretary.",
+          "Brings tournament discipline into clear, motivating everyday coaching.",
         ],
       },
     ],
@@ -324,14 +316,14 @@ export const TEAM = [
       alt: "Samata Sarvankar, Trainer at Namita's Femme Fitness.",
     },
     intro:
-      "Samata brings movement, rhythm, and momentum into high-energy classes. Her sessions are warm, motivating, and designed to help women feel capable while building confidence in a supportive training atmosphere.",
+      "Samata brings bright energy into every class and keeps the room feeling welcoming. Her style is encouraging, attentive, and easy for members to connect with.",
     groups: [
       {
-        title: "Training Energy",
+        title: "Class Experience",
         items: [
-          "Leads momentum-driven sessions with a positive coaching style.",
-          "Creates an energetic class environment without losing personal attention.",
-          "Focuses on confidence, consistency, and movement that feels alive.",
+          "Leads high-energy sessions with a positive training tone.",
+          "Creates a friendly environment that keeps members engaged.",
+          "Encourages consistency through warm, approachable coaching.",
         ],
       },
     ],
@@ -344,14 +336,14 @@ export const TEAM = [
       alt: "Aarti Patil, Certified Nutritional Advisor at Namita's Femme Fitness.",
     },
     intro:
-      "Aarti supports the wellness journey through calm, practical nutritional guidance. Her approach is balanced, women-first, and rooted in everyday healthy living rather than overwhelming rules.",
+      "Aarti supports members with practical nutrition guidance that fits real life. Her work focuses on steady habits, weight management support, and choices women can sustain.",
     groups: [
       {
-        title: "Wellness Guidance",
+        title: "Nutrition Guidance",
         items: [
-          "Supports balanced nutrition and practical healthy living.",
-          "Helps women connect food choices with sustainable wellbeing.",
-          "Brings a calm, trustworthy presence to wellness planning.",
+          "Guides sustainable health habits and balanced food choices.",
+          "Supports weight management with a lifestyle-focused approach.",
+          "Keeps nutrition coaching clear, practical, and realistic.",
         ],
       },
     ],

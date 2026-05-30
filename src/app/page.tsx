@@ -14,14 +14,14 @@ export default function Home() {
   return (
     <main id="main" className="flex-1">
       <Hero />
-      <QuickContactBar />
-      <WhyChooseUs />
-      <FounderSection />
       <FounderHomeStory />
-      <ServicesSection />
-      <TrustSection />
+      <FounderSection />
+      <WhyChooseUs />
       <TestimonialsSection />
       <SadhviSailNote />
+      <ServicesSection />
+      <QuickContactBar />
+      <TrustSection />
       <GalleryMasonry />
       <ContactSection />
     </main>
